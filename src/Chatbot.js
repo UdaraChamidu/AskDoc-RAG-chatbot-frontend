@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./Chatbot.css";
 
-// ✅ Use env variable for backend base URL
+//✅ Use env variable for backend base URL
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function ChatBox() {
