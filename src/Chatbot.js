@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./Chatbot.css";
 
+// ✅ Use env variable for backend base URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export default function ChatBox() {
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
@@ -20,7 +23,7 @@ export default function ChatBox() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:8000/upload", formData, {
+      const res = await axios.post(`${API_BASE_URL}/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -30,7 +33,7 @@ export default function ChatBox() {
       setChatHistory([
         {
           sender: "bot",
-          text: `Your PDF file,   "${res.data.filename}" is uploaded. Now you can ask questions.`,
+          text: `Your PDF file, "${res.data.filename}" is uploaded. Now you can ask questions.`,
         },
       ]);
     } catch (err) {
@@ -47,7 +50,7 @@ export default function ChatBox() {
     setChatHistory((prev) => [...prev, { sender: "user", text: message }]);
 
     try {
-      const res = await axios.post("http://localhost:8000/chat", {
+      const res = await axios.post(`${API_BASE_URL}/chat`, {
         message,
         file_id: fileId,
       });
@@ -57,6 +60,7 @@ export default function ChatBox() {
         { sender: "bot", text: res.data.answer },
       ]);
     } catch (err) {
+      console.error(err);
       setChatHistory((prev) => [
         ...prev,
         { sender: "bot", text: "⚠️ Error: could not reach backend" },
