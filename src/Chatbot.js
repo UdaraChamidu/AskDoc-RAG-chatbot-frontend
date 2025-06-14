@@ -22,18 +22,22 @@ export default function ChatBox() {
     try {
       const res = await axios.post("http://localhost:8000/upload", formData, {
         headers: {
-          "Content-Type": "multipart/form-data"
-        }
+          "Content-Type": "multipart/form-data",
+        },
       });
 
       setFileId(res.data.file_id);
-      setChatHistory([{
-        sender: "bot",
-        text: `Your PDF file,   "${res.data.filename}" is uploaded. Now you can ask questions.`
-      }]);
+      setChatHistory([
+        {
+          sender: "bot",
+          text: `Your PDF file,   "${res.data.filename}" is uploaded. Now you can ask questions.`,
+        },
+      ]);
     } catch (err) {
       console.error(err);
-      alert("Error uploading PDF: " + (err.response?.data?.error || "Unknown error"));
+      alert(
+        "Error uploading PDF: " + (err.response?.data?.error || "Unknown error")
+      );
     }
   };
 
@@ -45,7 +49,7 @@ export default function ChatBox() {
     try {
       const res = await axios.post("http://localhost:8000/chat", {
         message,
-        file_id: fileId
+        file_id: fileId,
       });
 
       setChatHistory((prev) => [
@@ -82,9 +86,7 @@ export default function ChatBox() {
 
       <div className="chatbox-history">
         {chatHistory.length === 0 && (
-          <p className="chatbox-placeholder">
-            Upload a PDF to get started ...
-          </p>
+          <p className="chatbox-placeholder">Upload a PDF to get started ...</p>
         )}
 
         {chatHistory.map((msg, idx) => {
