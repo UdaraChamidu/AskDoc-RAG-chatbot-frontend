@@ -2,7 +2,9 @@
 
 # ⚙️ Chatbot Backend (FastAPI)
 
-This is the **FastAPI backend** for the RAG-based chatbot. It handles user queries and generates responses using LangChain, FAISS, and Gemini API.
+This is the **FastAPI backend** for the RAG-based chatbot. It handles user queries and generates responses using LangChain, FAISS and Gemini API.
+
+To Run, Save this frontend and backend two repositories in a one single folder. After that, run separately frontend and backend using seperate terminals. First run backend and then run frontend.
 
 ## 🧰 Tech Stack
 
