@@ -1,0 +1,126 @@
+
+.chatbox-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #f0f4ff, #ffe9f9);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chatbox-title {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.chatbox-history {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.05);
+  scroll-behavior: smooth;
+}
+
+.chatbox-placeholder {
+  text-align: center;
+  color: #9c27b0;
+  font-style: italic;
+  margin-top: 40%;
+}
+
+.chatbox-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  max-width: 75%;
+}
+
+.chatbox-message.user {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.chatbox-message.bot {
+  margin-right: auto;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(to top right, #9333ea, #c084fc);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: white;
+  position: relative;
+  line-height: 1.4;
+}
+
+.chatbox-message.user .bubble {
+  background: linear-gradient(to right, #ec4899, #f43f5e);
+}
+
+.chatbox-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.chatbox-textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: border 0.3s ease;
+}
+
+.chatbox-textarea:focus {
+  outline: none;
+  border: 2px solid #9333ea;
+}
+
+.chatbox-button {
+  background-color: #9333ea;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.chatbox-button:hover {
+  background-color: #7e22ce;
+}
+
+.chatbox-button:disabled {
+  background-color: #ddd6fe;
+  cursor: not-allowed;
+}
