@@ -21,6 +21,8 @@ cd chatbot-frontend
 npm install
 ```
 
+### Tried many times to deploy in vercel. But there ware some issues with vite. 
+
 # Run the development server
 ```
 npm start
