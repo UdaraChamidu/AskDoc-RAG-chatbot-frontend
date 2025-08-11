@@ -4,9 +4,8 @@ import "./Chatbot.css";
 
 //✅ Use env variable for backend base URL
 
-
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+console.log("API base URL:", API_BASE_URL);
 
 export default function ChatBox() {
   const [message, setMessage] = useState("");
