@@ -1,12 +1,10 @@
 # AskDoc Chatbot - Frontend
 
-![Chatbot UI Preview](./path_to_screenshot_or_demo_image.png)  
-<!-- Replace with your actual image path -->
-
 This is the **React frontend** for the AskDoc chatbot application.  
 It allows users to upload PDF documents and chat with an AI-powered assistant about the document content.
 
 ---
+<img width="1103" height="831" alt="image" src="https://github.com/user-attachments/assets/07214ea6-2f85-496f-bb86-0b59b382e8fa" />
 
 ## Demo
 
@@ -27,8 +25,12 @@ It allows users to upload PDF documents and chat with an AI-powered assistant ab
 
 ### Prerequisites
 
-- Node.js (>=14.x recommended)
-- npm (comes with Node.js)
+- Node.js 
+- npm
+- HTML
+- CSS
+- JS
+- React
 
 ### Installation
 
