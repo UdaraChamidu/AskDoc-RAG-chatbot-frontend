@@ -8,7 +8,7 @@ It allows users to upload PDF documents and chat with an AI-powered assistant ab
 
 ## Demo
 
-[![Open Demo](https://img.shields.io/badge/Open-Demo-blue?style=for-the-badge&logo=google-chrome)](http://your-demo-url.com)  
+[![Open Demo](https://img.shields.io/badge/Open-Demo-blue?style=for-the-badge&logo=google-chrome)]([http://your-demo-url.com](https://ask-doc-rag-chatbot-frontend.vercel.app/))  
 <!-- Replace `http://your-demo-url.com` with your actual deployed frontend demo URL -->
 
 ---
