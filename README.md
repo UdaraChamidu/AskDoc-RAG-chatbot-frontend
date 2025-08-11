@@ -1,31 +1,46 @@
-# 🧠 Chatbot Frontend (React)
+# AskDoc Chatbot - Frontend
 
-This is the **React frontend** for the RAG-based chatbot application.
+This is the **React frontend** for the AskDoc chatbot application.  
+It allows users to upload PDF documents and chat with an AI-powered assistant about the document content.
 
-## 🛠️ Built With
+---
+<img width="1103" height="831" alt="image" src="https://github.com/user-attachments/assets/07214ea6-2f85-496f-bb86-0b59b382e8fa" />
 
-- [React](https://reactjs.org/)
-- HTML CSS JS
-- Axios (for API calls)
+## Demo
 
-## 📦 Setup Instructions
+[![Open Demo](https://img.shields.io/badge/Open-Demo-blue?style=for-the-badge&logo=google-chrome)](http://your-demo-url.com)  
+<!-- Replace `http://your-demo-url.com` with your actual deployed frontend demo URL -->
+
+---
+
+## Features
+
+- Upload PDF files
+- Chat interface with history
+- Connects to backend API for AI responses
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 
+- npm
+- HTML
+- CSS
+- JS
+- React
+
+### Installation
 
 ```bash
-# Clone the repo
-git clone https://github.com/YOUR_USERNAME/chatbot-frontend.git
-cd chatbot-frontend
-```
-
-# Install dependencies
-```
+git clone https://github.com/UdaraChamidu/AskDoc-RAG-chatbot-frontend.git
+cd frontend
 npm install
 ```
 
-
-# Run the development server
+### To Run
 ```
 npm start
 ```
-
-### Tried many times to deploy in vercel. But there ware some issues with vite. 
-
